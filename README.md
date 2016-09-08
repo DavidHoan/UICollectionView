@@ -5,7 +5,7 @@ UICollectionView
 Download
 --------
 
-### [Click here to download latest version](http://ethanschoonover.com/solarized/files/solarized.zip)
+### [Click here to download latest version](https://github.com/DavidHoan/UICollectionView)
 
 Current release is **v1.0.0beta2**. See the [changelog] for details on what's
 new in this release.
@@ -18,27 +18,18 @@ and git repositories:
 *   **Canonical Project Page:**
 
     Downloads, screenshots and more information are always available from the
-    project page: <http://ethanschoonover.com/solarized>
+    project page: <https://github.com/DavidHoan/UICollectionView>
 
 *   **Full Git Repository:**
 
-    The full git repository is at: <https://github.com/altercation/solarized>
+    The full git repository is at: <https://github.com/DavidHoan/UICollectionView>
     Get it using the following command:
-
-        $ git clone git://github.com/altercation/solarized.git
+	
+	$ git clone git://github.com/DavidHoan/UICollectionView.git
 
 
 Screenshots
 -----------
-
-Click to view.
-
-### Mutt
-
-The Values
-----------
-
-
 Auto column for screensize
 	
 Updated:
