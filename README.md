@@ -44,8 +44,6 @@ The Values
 
 Auto column for screensize
 
-[![mutt dark](https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone5.png)](https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone5.png)
-
 ![value samples - dark](https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone5.png)
 
 ![value samples - dark](https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone6+.png)
