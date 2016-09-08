@@ -43,6 +43,17 @@ The Values
 
 
 Auto column for screensize
+	
+Updated:
+
+Code (external/internal):
+
+![test](https://github.com/favicon.ico)
+Code (internal/external for sizing):
+
+<img src="https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone5.png" width="120">
+<img src="https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone6+.png" width="120">
+<img src="https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_ipad.png" width="120">
 
 ![value samples - dark](https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone5.png)
 
