@@ -35,9 +35,6 @@ Click to view.
 
 ### Mutt
 
-[![mutt dark](https://github.com/altercation/solarized/raw/master/img/screen-mutt-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/screen-mutt-dark.png)
-[![mutt light](https://github.com/altercation/solarized/raw/master/img/screen-mutt-light-th.png)](https://github.com/altercation/solarized/raw/master/img/screen-mutt-light.png)
-
 The Values
 ----------
 
@@ -46,17 +43,6 @@ Auto column for screensize
 	
 Updated:
 
-Code (external/internal):
-
-![test](https://github.com/favicon.ico)
-Code (internal/external for sizing):
-
-<img src="https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone5.png" width="120">
-<img src="https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone6+.png" width="120">
-<img src="https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_ipad.png" width="120">
-
-![value samples - dark](https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone5.png)
-
-![value samples - dark](https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone6+.png)
-
-![value samples - light](https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_ipad.png)
+<img src="https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone5.png" height="160">
+<img src="https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_iphone6+.png" height="160">
+<img src="https://github.com/DavidHoan/UICollectionView/blob/master/screenshots/autolayout_ipad.png" height="160">
