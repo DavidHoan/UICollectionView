@@ -16,6 +16,9 @@
 		A5607E861D816C68008C12B7 /* item.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5607E851D816C68008C12B7 /* item.jpg */; };
 		A5607E891D816CA3008C12B7 /* itemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5607E881D816CA3008C12B7 /* itemCell.m */; };
 		A5607E8C1D816CD5008C12B7 /* itemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5607E8B1D816CD5008C12B7 /* itemCell.xib */; };
+		A5607E911D81734B008C12B7 /* autolayout_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = A5607E8E1D81734B008C12B7 /* autolayout_ipad.png */; };
+		A5607E921D81734B008C12B7 /* autolayout_iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = A5607E8F1D81734B008C12B7 /* autolayout_iphone5.png */; };
+		A5607E931D81734B008C12B7 /* autolayout_iphone6+.png in Resources */ = {isa = PBXBuildFile; fileRef = A5607E901D81734B008C12B7 /* autolayout_iphone6+.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		A5607E871D816CA3008C12B7 /* itemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itemCell.h; sourceTree = "<group>"; };
 		A5607E881D816CA3008C12B7 /* itemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = itemCell.m; sourceTree = "<group>"; };
 		A5607E8B1D816CD5008C12B7 /* itemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = itemCell.xib; sourceTree = "<group>"; };
+		A5607E8E1D81734B008C12B7 /* autolayout_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autolayout_ipad.png; sourceTree = "<group>"; };
+		A5607E8F1D81734B008C12B7 /* autolayout_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autolayout_iphone5.png; sourceTree = "<group>"; };
+		A5607E901D81734B008C12B7 /* autolayout_iphone6+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "autolayout_iphone6+.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 		A5607E621D816B75008C12B7 = {
 			isa = PBXGroup;
 			children = (
+				A5607E8D1D81734B008C12B7 /* screenshots */,
 				A5607E6D1D816B75008C12B7 /* customCollectionView */,
 				A5607E6C1D816B75008C12B7 /* Products */,
 			);
@@ -96,6 +103,16 @@
 				A5607E8B1D816CD5008C12B7 /* itemCell.xib */,
 			);
 			name = itemcell;
+			sourceTree = "<group>";
+		};
+		A5607E8D1D81734B008C12B7 /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				A5607E8E1D81734B008C12B7 /* autolayout_ipad.png */,
+				A5607E8F1D81734B008C12B7 /* autolayout_iphone5.png */,
+				A5607E901D81734B008C12B7 /* autolayout_iphone6+.png */,
+			);
+			path = screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +176,10 @@
 				A5607E7B1D816B76008C12B7 /* Assets.xcassets in Resources */,
 				A5607E861D816C68008C12B7 /* item.jpg in Resources */,
 				A5607E8C1D816CD5008C12B7 /* itemCell.xib in Resources */,
+				A5607E931D81734B008C12B7 /* autolayout_iphone6+.png in Resources */,
+				A5607E911D81734B008C12B7 /* autolayout_ipad.png in Resources */,
 				A5607E791D816B75008C12B7 /* Main.storyboard in Resources */,
+				A5607E921D81734B008C12B7 /* autolayout_iphone5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
