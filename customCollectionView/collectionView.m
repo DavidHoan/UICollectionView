@@ -6,19 +6,28 @@
 //  Copyright © 2016 Dong Quoc. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "collectionView.h"
 
-@interface ViewController ()
+@interface collectionView (){
+    int cellX;
+    int cellY;
+}
 
 @end
 
-@implementation ViewController
+@implementation collectionView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    myItems = [[NSMutableArray alloc] init];
+    for (int i=0; i<25; i++) {
+        myItems[i] = @"item.jpg";
+    }
+    
     [self initItems];
 }
 
@@ -39,7 +48,7 @@
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 25;
+    return myItems.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -66,16 +75,83 @@
     //    [cell.image1 addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playgame_action:)]];
     //    [cell.image1 setUserInteractionEnabled:YES];
     cell.image.backgroundColor = [UIColor cyanColor];
-    cell.image.tag = (int)indexPath.row;
-    
+    //cell.image.tag = (int)indexPath.row;
+    cell.tag = (int)indexPath.row;
     cell.backgroundColor = [UIColor lightGrayColor];
     
+    UILongPressGestureRecognizer *lpHandler = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleHoldGesture:)];
+    lpHandler.minimumPressDuration = 1; //seconds
+    lpHandler.delegate = self;
+    //myUIImageViewInstance - replace for your instance/variable name
+    [cell addGestureRecognizer:lpHandler];
+    
+    
     return cell;
+    
+    
+}
+
+- (void) handleHoldGesture:(UILongPressGestureRecognizer *)gesture
+{
+    itemCell *cellitem = (itemCell*)[self.view viewWithTag:(int)gesture.view.tag];
+    
+    if(UIGestureRecognizerStateBegan == gesture.state)
+    {
+        
+        
+        // Called on start of gesture, do work here
+        
+        [cellitem shake:10   // 10 times
+              withDelta:5    // 5 points wide
+                  speed:0.03 // 30ms per shake
+         shakeDirection:ShakeDirectionVertical
+         ];
+        
+        
+        
+    }
+    
+    if(UIGestureRecognizerStateChanged == gesture.state)
+    {
+        // Do repeated work here (repeats continuously) while finger is down
+        NSLog(@"Do repeated work here (repeats continuously) while finger is down");
+    }
+    
+    if(UIGestureRecognizerStateEnded == gesture.state)
+    {
+        // Do end work here when finger is lifted
+        NSLog(@"Do end work here when finger is lifted");
+        
+        
+        
+        
+        NSLog(@"Called on start of gesture, do work here : %d - x: %f - y : %f", (int)gesture.view.tag, cellitem.frame.origin.x, cellitem.frame.origin.y);
+        
+        
+        UILabel *xoalb = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 100, 50)] ;
+        xoalb.backgroundColor = [UIColor lightGrayColor];
+        xoalb.text = @"Gỡ cài đặt";
+        xoalb.center = cellitem.center;
+        [cellitem addSubview:xoalb];
+        
+        dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 3.5);
+        dispatch_after(delay, dispatch_get_main_queue(), ^(void){
+            //cell.image.image = [UIImage imageNamed:@""];
+            [myItems removeObjectAtIndex:gesture.view.tag];
+            [_collectionView reloadData];
+        });
+    }
+    
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"indexPath.row : %d", (int) indexPath.row);
+    //    UICollectionViewLayoutAttributes * theAttributes = [collectionView layoutAttributesForItemAtIndexPath:indexPath];
+    //    cellX = theAttributes.center.x;
+    //    cellY = theAttributes.center.y;
+    
+    //CGRect cellFrameInSuperview = [collectionView convertRect:theAttributes.frame toView:[collectionView superview]];
     
 }
 
@@ -84,13 +160,13 @@
     float screenwidth = [UIScreen mainScreen].bounds.size.width;
     
     if (screenwidth<414) {
-        NSLog(@"item w: %f", screenwidth/2);
+        //NSLog(@"item w: %f", screenwidth/2);
         return CGSizeMake(screenwidth/2, (18/14)*screenwidth/2);
     } else if (screenwidth>=414&&screenwidth<768){
-        NSLog(@"item w: %f", screenwidth/3);
+        //NSLog(@"item w: %f", screenwidth/3);
         return CGSizeMake(screenwidth/3, (19/16)*screenwidth/3);
     } else {
-        NSLog(@"item w: %f", screenwidth/4);
+        //NSLog(@"item w: %f", screenwidth/4);
         return CGSizeMake(screenwidth/4, (19/16)*screenwidth/4);
     }
     

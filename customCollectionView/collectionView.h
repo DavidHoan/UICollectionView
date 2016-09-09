@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "itemCell.h"
+#import "UIView+Shake.h"
 
-
-@interface ViewController : UIViewController  <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>{
+@interface collectionView : UIViewController  <UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate>{
     UICollectionView *_collectionView;
+    NSMutableArray *myItems;
 }
 
 
